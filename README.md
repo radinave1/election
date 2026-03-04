@@ -1,6 +1,6 @@
-# 🗳️ Site de Campagne - David Cohen pour Nanterre
+# 🗳️ Site de Campagne - Raphaël Adam pour Nanterre
 
-Site web statique pour la campagne municipale de David Cohen à Nanterre.
+Site web statique pour la campagne municipale de Raphaël Adam à Nanterre.
 
 ## 📁 Structure du projet
 
@@ -87,9 +87,9 @@ Ouvrez le fichier avec Excel, LibreOffice Calc, ou même Notepad.
 **Colonnes disponibles :**
 | Colonne | Description | Exemple |
 |---------|-------------|---------|
-| `nom` | Nom complet | `David Cohen` |
+| `nom` | Nom complet | `Raphaël Adam` |
 | `role` | Fonction/délégation | `Tête de liste` |
-| `photo` | Nom du fichier photo | `david-cohen.jpg` |
+| `photo` | Nom du fichier photo | `raphael-adam.jpg` |
 | `description` | Biographie courte | `Entrepreneur depuis 25 ans...` |
 
 **Pour ajouter une photo :**

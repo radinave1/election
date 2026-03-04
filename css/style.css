@@ -1,5 +1,5 @@
 /* ========================================
-   David Cohen - Site de Campagne
+   Raphaël Adam - Site de Campagne
    Styles modernes et élégants
    ======================================== */
 
@@ -127,8 +127,24 @@ img {
 
 .nav-logo {
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    gap: 15px;
     text-decoration: none;
+}
+
+.logo-image {
+    height: 50px;
+    width: auto;
+    transition: var(--transition);
+}
+
+.navbar.scrolled .logo-image {
+    height: 45px;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
 }
 
 .logo-name {
@@ -252,12 +268,22 @@ img {
     transition: opacity 1s ease, visibility 1s ease;
 }
 
+.slide::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(86, 177, 166, 0.4), rgba(46, 143, 135, 0.5));
+    z-index: 1;
+}
+
 .slide.active {
     opacity: 1;
     visibility: visible;
 }
 
 .slide-content {
+    position: relative;
+    z-index: 2;
     text-align: center;
     color: var(--white);
     padding: 20px;
@@ -1148,6 +1174,13 @@ img {
 .footer-brand {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer-logo {
+    height: 60px;
+    width: auto;
 }
 
 .footer-name {
@@ -1315,6 +1348,76 @@ img {
 .fade-in.visible {
     opacity: 1;
     transform: translateY(0);
+}
+
+/* === Équipe - Voir Plus Button === */
+.equipe-voir-plus {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.btn-voir-equipe {
+    display: inline-block;
+    padding: 16px 48px;
+    background: var(--gradient-main);
+    color: var(--white);
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 50px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: var(--transition);
+    box-shadow: var(--shadow-lg);
+}
+
+.btn-voir-equipe:hover {
+    color: var(--white);
+    transform: translateY(-3px);
+    box-shadow: var(--shadow-xl);
+    opacity: 0.92;
+}
+
+/* === Page Header (equipe.html, bilan.html, etc.) === */
+.page-header {
+    background: linear-gradient(135deg, var(--primary-dark), var(--primary));
+    padding: 140px 0 60px;
+    text-align: center;
+}
+
+.page-header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.page-back-link {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: var(--transition);
+    align-self: flex-start;
+}
+
+.page-back-link:hover {
+    color: var(--white);
+}
+
+.page-header-title {
+    font-size: clamp(2.2rem, 5vw, 3.5rem);
+    color: var(--white);
+    margin: 0;
+}
+
+.page-header-subtitle {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.85);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.equipe-page-section {
+    padding-top: 60px;
 }
 
 /* === Utility Classes === */

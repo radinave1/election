@@ -1,5 +1,5 @@
 /**
- * David Cohen - Site de Campagne
+ * Raphaël Adam - Site de Campagne
  * JavaScript principal
  */
 
@@ -247,6 +247,24 @@ async function loadAgenda() {
 // Équipe
 // ========================================
 
+function renderMembreCard(membre, imagePath) {
+    const initials = (membre.nom || 'NN').split(' ').map(n => n[0]).join('').substring(0, 2);
+    const hasPhoto = membre.photo && membre.photo.trim() !== '';
+    return `
+        <article class="equipe-card fade-in">
+            ${hasPhoto 
+                ? `<img src="${imagePath}${membre.photo}" alt="${membre.nom}" class="equipe-photo" onerror="this.outerHTML='<div class=\\'equipe-photo-placeholder\\'>${initials}</div>'">`
+                : `<div class="equipe-photo-placeholder">${initials}</div>`
+            }
+            <div class="equipe-info">
+                <h3 class="equipe-name">${membre.nom || 'Nom'}</h3>
+                <p class="equipe-role">${membre.role || 'Membre'}</p>
+                <p class="equipe-description">${membre.description || ''}</p>
+            </div>
+        </article>
+    `;
+}
+
 async function loadEquipe() {
     const container = document.getElementById('equipeGrid');
     const membres = await loadCSV('data/equipe.csv');
@@ -261,25 +279,36 @@ async function loadEquipe() {
         return;
     }
 
-    container.innerHTML = membres.map(membre => {
-        const initials = (membre.nom || 'NN').split(' ').map(n => n[0]).join('').substring(0, 2);
-        const hasPhoto = membre.photo && membre.photo.trim() !== '';
-        
-        return `
-            <article class="equipe-card fade-in">
-                ${hasPhoto 
-                    ? `<img src="images/equipe/${membre.photo}" alt="${membre.nom}" class="equipe-photo" onerror="this.outerHTML='<div class=\\'equipe-photo-placeholder\\'>${initials}</div>'">`
-                    : `<div class="equipe-photo-placeholder">${initials}</div>`
-                }
-                <div class="equipe-info">
-                    <h3 class="equipe-name">${membre.nom || 'Nom'}</h3>
-                    <p class="equipe-role">${membre.role || 'Membre'}</p>
-                    <p class="equipe-description">${membre.description || ''}</p>
-                </div>
-            </article>
-        `;
-    }).join('');
+    // Show only first 9 members on the home page
+    const preview = membres.slice(0, 9);
 
+    container.innerHTML = preview.map(membre => renderMembreCard(membre, 'images/equipe/')).join('');
+
+    // Update the static button text with the total count
+    const btn = document.getElementById('btnVoirEquipe');
+    if (btn) {
+        btn.textContent = `Voir toute l'équipe (${membres.length} membres)`;
+    }
+
+    initFadeInAnimation();
+}
+
+async function loadAllEquipe() {
+    const container = document.getElementById('equipeGrid');
+    if (!container) return;
+    const membres = await loadCSV('data/equipe.csv');
+    
+    if (membres.length === 0) {
+        container.innerHTML = `
+            <div class="loading">
+                Équipe en cours de constitution.<br>
+                <small>Modifiez le fichier <code>data/equipe.csv</code> pour ajouter des membres.</small>
+            </div>
+        `;
+        return;
+    }
+
+    container.innerHTML = membres.map(membre => renderMembreCard(membre, 'images/equipe/')).join('');
     initFadeInAnimation();
 }
 
@@ -480,7 +509,7 @@ async function loadSocialFeed() {
                         ${networkIcons[network] || '📱'}
                     </div>
                     <div class="social-post-author">
-                        <div class="social-post-author-name">${post.auteur || 'David Cohen'}</div>
+                        <div class="social-post-author-name">${post.auteur || 'Raphaël Adam'}</div>
                         <div class="social-post-date">${formattedDate}</div>
                     </div>
                 </div>
@@ -540,18 +569,22 @@ function initSocialFilter() {
 // ========================================
 
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('🗳️ Site de campagne David Cohen - Initialisation...');
+    console.log('🗳️ Site de campagne Raphaël Adam - Initialisation...');
     
     initNavigation();
-    initSlider();
     initSmoothScroll();
     initContactForm();
-    
-    // Load dynamic content
-    loadAgenda();
-    loadEquipe();
-    loadEngagement();
-    loadSocialFeed();
+
+    // Only init slider on pages that have it
+    if (document.getElementById('heroSlider')) {
+        initSlider();
+    }
+
+    // Only load sections that exist on this page
+    if (document.getElementById('agendaGrid')) loadAgenda();
+    if (document.getElementById('equipeGrid') && document.querySelector('.equipe-section:not(.equipe-page-section)')) loadEquipe();
+    if (document.getElementById('engagementContainer')) loadEngagement();
+    if (document.getElementById('socialFeedGrid')) loadSocialFeed();
     
     console.log('✅ Site initialisé avec succès!');
 });

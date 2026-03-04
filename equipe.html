@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Raphaël Adam - Notre équipe engagée pour Nanterre">
+    <title>Notre Équipe | Raphaël Adam - Nanterre 2026</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar scrolled" id="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="images/logo/logo.png" alt="Logo Electoral" class="logo-image">
+                <div class="logo-text">
+                    <span class="logo-name">Raphaël Adam</span>
+                    <span class="logo-subtitle">Nanterre 2026</span>
+                </div>
+            </a>
+            <button class="nav-toggle" id="navToggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html#accueil" class="nav-link">Accueil</a></li>
+                <li><a href="index.html#agenda" class="nav-link">Agenda</a></li>
+                <li><a href="equipe.html" class="nav-link active">L'Équipe</a></li>
+                <li><a href="index.html#engagement" class="nav-link">Engagement</a></li>
+                <li><a href="bilan.html" class="nav-link">Notre bilan</a></li>
+                <li><a href="index.html#reseaux" class="nav-link nav-cta">Suivez nous</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="page-header">
+        <div class="container">
+            <div class="page-header-content">
+                <a href="index.html" class="page-back-link">← Retour à l'accueil</a>
+                <h1 class="page-header-title">Notre équipe</h1>
+                <p class="page-header-subtitle">Des femmes et des hommes engagés pour construire l'avenir de Nanterre</p>
+            </div>
+        </div>
+    </header>
+
+    <!-- Équipe Section -->
+    <section class="section equipe-section equipe-page-section">
+        <div class="container">
+            <div class="equipe-grid" id="equipeGrid">
+                <div class="loading">Chargement de l'équipe...</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="images/logo/logo.png" alt="Logo Electoral" class="footer-logo">
+                    <span class="footer-name">Raphaël Adam</span>
+                    <span class="footer-slogan">Nos engagements pour Nanterre</span>
+                </div>
+                <div class="footer-links">
+                    <a href="index.html#accueil">Accueil</a>
+                    <a href="index.html#agenda">Agenda</a>
+                    <a href="equipe.html">L'Équipe</a>
+                    <a href="index.html#engagement">Engagement</a>
+                    <a href="bilan.html">Notre bilan</a>
+                    <a href="index.html#reseaux">Suivez nous</a>
+                </div>
+                <div class="footer-legal">
+                    <p>&copy; 2026 Raphaël Adam - Élections Municipales Nanterre</p>
+                    <p>Site réalisé conformément aux règles électorales en vigueur</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Override DOMContentLoaded for the equipe page
+        document.addEventListener('DOMContentLoaded', () => {
+            // Mobile menu toggle
+            const navToggle = document.getElementById('navToggle');
+            const navMenu = document.getElementById('navMenu');
+            navToggle.addEventListener('click', () => {
+                navToggle.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+
+            // Load all team members
+            loadAllEquipe();
+        });
+    </script>
+</body>
+</html>
