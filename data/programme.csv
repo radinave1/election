@@ -1,35 +1,216 @@
-theme,icone,point
-Éducation et Jeunesse,🎓,Rénover et moderniser toutes les écoles de la ville dans les 3 ans
-Éducation et Jeunesse,🎓,Créer 500 nouvelles places en crèche et halte-garderie
-Éducation et Jeunesse,🎓,Mettre en place un accompagnement scolaire gratuit dans chaque quartier
-Éducation et Jeunesse,🎓,Développer les activités périscolaires sportives et culturelles
-Éducation et Jeunesse,🎓,Créer une Maison des Jeunes avec espace de coworking et studio d'enregistrement
-Transition Écologique,🌿,Planter 10 000 arbres et végétaliser 30% des espaces publics
-Transition Écologique,🌿,Créer des pistes cyclables sécurisées sur tous les grands axes
-Transition Écologique,🌿,Installer des panneaux solaires sur tous les bâtiments municipaux
-Transition Écologique,🌿,Développer les jardins partagés dans chaque quartier
-Transition Écologique,🌿,Rendre les transports en commun gratuits le week-end
-Économie et Emploi,💼,Créer une pépinière d'entreprises pour les jeunes créateurs
-Économie et Emploi,💼,Soutenir les commerces de proximité avec un fonds dédié
-Économie et Emploi,💼,Lancer un plan de 1000 emplois jeunes avec les entreprises locales
-Économie et Emploi,💼,Développer l'économie sociale et solidaire
-Économie et Emploi,💼,Organiser un marché des producteurs locaux chaque semaine
-Solidarités et Santé,❤️,Ouvrir une Maison de Santé pluridisciplinaire dans le quartier Pablo Picasso
-Solidarités et Santé,❤️,Renforcer l'aide aux personnes âgées isolées
-Solidarités et Santé,❤️,Créer un guichet unique d'accès aux droits sociaux
-Solidarités et Santé,❤️,Augmenter les places en résidences pour personnes âgées
-Solidarités et Santé,❤️,Mettre en place une épicerie solidaire ouverte à tous
-Logement et Urbanisme,🏠,Construire 2000 logements dont 50% de logements sociaux
-Logement et Urbanisme,🏠,Réhabiliter les copropriétés dégradées
-Logement et Urbanisme,🏠,Créer des résidences pour étudiants et jeunes travailleurs
-Logement et Urbanisme,🏠,Améliorer l'accessibilité pour les personnes handicapées
-Logement et Urbanisme,🏠,Rénover les espaces publics du centre-ville
-Culture et Sport,🎭,Rénover le Théâtre des Amandiers et créer une salle de spectacles supplémentaire
-Culture et Sport,🎭,Organiser un festival annuel des cultures nanterriennes
-Culture et Sport,🎭,Construire un nouveau complexe sportif avec piscine olympique
-Culture et Sport,🎭,Soutenir les associations culturelles et sportives locales
-Culture et Sport,🎭,Créer un parcours d'art urbain dans toute la ville
-Sécurité et Tranquillité,🛡️,Renforcer la police municipale avec 30 agents supplémentaires
-Sécurité et Tranquillité,🛡️,Améliorer l'éclairage public dans tous les quartiers
-Sécurité et Tranquillité,🛡️,Créer des médiateurs de quartier pour le lien social
-Sécurité et Tranquillité,🛡️,Mettre en place un numéro vert d'urgence municipale
+grand_theme,icone,theme,sous_theme,point
+Nanterre qui protège,Nanterrequiprotege.png,Habitat & logement,Construire des logements abordables et de qualité,"Continuer de construire des logements mixtes, intégrant 40% de logements HLM, hors quartiers Politique de la Ville pour favoriser la mixité à l'échelle des immeubles"
+Nanterre qui protège,Nanterrequiprotege.png,Habitat & logement,Construire des logements abordables et de qualité,Poursuivre le développement du Bail réel solidaire (BRS) pour permettre aux Nanterrien.ne.s d’acquérir à des prix inférieurs à ceux du marché
+Nanterre qui protège,Nanterrequiprotege.png,Habitat & logement,Construire des logements abordables et de qualité,Développer la conversion des bureaux vacants en logements
+Nanterre qui protège,Nanterrequiprotege.png,Habitat & logement,Construire des logements abordables et de qualité,"Actualiser et renforcer la charte de qualité des constructions neuves (30% de pleine terre, récupération de l’eau de pluie, espaces adaptés au quotidien …)"
+Nanterre qui protège,Nanterrequiprotege.png,Habitat & logement,Construire des logements abordables et de qualité,Encadrer le développement du coliving en s’opposant aux projets proposant des loyers excessifs
+Nanterre qui protège,Nanterrequiprotege.png,Habitat & logement,Construire des logements abordables et de qualité,Achever la transformation des foyers de travailleurs migrants en résidences sociales
+Nanterre qui protège,Nanterrequiprotege.png,Habitat & logement,Accompagner les Nanterrien.ne.s et se mobiliser face à la crise,Renforcer la prévention des expulsions et des impayés de loyers
+Nanterre qui protège,Nanterrequiprotege.png,Habitat & logement,Accompagner les Nanterrien.ne.s et se mobiliser face à la crise,Se mobiliser auprès de POLD pour la mise en place de l’encadrement des loyers
+Nanterre qui protège,Nanterrequiprotege.png,Habitat & logement,Accompagner les Nanterrien.ne.s et se mobiliser face à la crise,Être plus exigeant vis-à-vis des bailleurs sociaux pour qu’ils s’investissent davantage dans les programmes mixtes où ils ont des logements
+Nanterre qui protège,Nanterrequiprotege.png,Habitat & logement,Accompagner les Nanterrien.ne.s et se mobiliser face à la crise,Conditionner les exonérations de taxe foncière des bailleurs sociaux sur les propriétés bâties à des projets contribuant à l’équilibre social des quartiers populaires
+Nanterre qui protège,Nanterrequiprotege.png,Habitat & logement,Accompagner les Nanterrien.ne.s et se mobiliser face à la crise,Organiser une journée des copropriétaires et des amicales de locataires
+Nanterre qui protège,Nanterrequiprotege.png,Habitat & logement,Accompagner les Nanterrien.ne.s et se mobiliser face à la crise,Créer une assurance habitation municipale sur le modèle de la mutuelle communale
+Nanterre qui protège,Nanterrequiprotege.png,Habitat & logement,Accompagner les Nanterrien.ne.s et se mobiliser face à la crise,Exiger des bailleurs sociaux d'appliquer le principe de non-augmentation des loyers en cas de mutation vers un logement plus petit
+Nanterre qui protège,Nanterrequiprotege.png,Habitat & logement,Garantir la transparence et l'équité dans le traitement des demandes de logement et de mutation,Expérimenter l’anonymisation des dossiers en commissions d’attribution de logements à Nanterre Coop Habitat
+Nanterre qui protège,Nanterrequiprotege.png,Habitat & logement,Garantir la transparence et l'équité dans le traitement des demandes de logement et de mutation,Exiger de l’ensemble des bailleurs un traitement équitable et transparent des demandes de logement et de mutation
+Nanterre qui protège,Nanterrequiprotege.png,Habitat & logement,Garantir la transparence et l'équité dans le traitement des demandes de logement et de mutation,Organiser des réunions d’information à destination des nouveaux demandeur.euse.s de logement
+Nanterre qui protège,Nanterrequiprotege.png,Habitat & logement,Garantir la transparence et l'équité dans le traitement des demandes de logement et de mutation,Relancer la journée annuelle de l’habitat
+Nanterre qui protège,Nanterrequiprotege.png,Droits des femmes,Protéger et reloger les femmes victimes de violences,"Prioriser, avec les bailleurs sociaux, les demandes de mutation des femmes victimes de violences"
+Nanterre qui protège,Nanterrequiprotege.png,Droits des femmes,Protéger et reloger les femmes victimes de violences,"Créer un contingent dédié au relogement des femmes victimes de violences, dans le parc ancien comme dans le neuf"
+Nanterre qui protège,Nanterrequiprotege.png,Droits des femmes,Protéger et reloger les femmes victimes de violences,Engager une mobilisation intercommunale pour faciliter les solutions de relogement
+Nanterre qui protège,Nanterrequiprotege.png,Droits des femmes,Protéger et reloger les femmes victimes de violences,Agir auprès du Département pour la mise en place d’un plan départemental
+Nanterre qui protège,Nanterrequiprotege.png,Droits des femmes,"Prévenir, former et sensibiliser",Généraliser la formation des élu.e.s et des agent.e.s de la Ville sur les violences sexistes et sexuelles
+Nanterre qui protège,Nanterrequiprotege.png,Droits des femmes,"Prévenir, former et sensibiliser","Déployer des actions d’information et de sensibilisation sur la santé des femmes, la puberté et la précarité menstruelle à destination des femmes et des jeunes filles"
+Nanterre qui protège,Nanterrequiprotege.png,Droits des femmes,"Prévenir, former et sensibiliser","Lutter contre les stéréotypes de genre et le masculinisme, dès le plus jeune âge"
+Nanterre qui protège,Nanterrequiprotege.png,Droits des femmes,Garantir l’égalité dans l’espace public et les politiques locales,Poursuivre la féminisation de l’espace public en donnant aux rues et équipements municipaux des noms de grandes figures féminines
+Nanterre qui protège,Nanterrequiprotege.png,Droits des femmes,Garantir l’égalité dans l’espace public et les politiques locales,"Élaborer et déployer un plan municipal d’égalité, transversal, doté d’objectifs clairs, d’indicateurs de suivi et d’une évaluation régulière"
+Nanterre qui protège,Nanterrequiprotege.png,Droits des femmes,Garantir l’égalité dans l’espace public et les politiques locales,Amplifier la mise à disposition de protections menstruelles réutilisables gratuites
+Nanterre qui protège,Nanterrequiprotege.png,Droits des femmes,Garantir l’égalité dans l’espace public et les politiques locales,Mettre en place un congé municipal lié aux règles et à l’endométriose et poursuivre les démarches auprès de l’État pour une reconnaissance légale
+Nanterre qui protège,Nanterrequiprotege.png,"Sécurité, tranquillité et prévention",Intensifier la vidéo-verbalisation en poursuivant le déploiement de la vidéoprotection,
+Nanterre qui protège,Nanterrequiprotege.png,"Sécurité, tranquillité et prévention",Augmenter les effectifs de la Police Municipale,
+Nanterre qui protège,Nanterrequiprotege.png,"Sécurité, tranquillité et prévention","Mieux traiter les incivilités en combinant pédagogie, prévention, médiation et verbalisation des infractions",
+Nanterre qui protège,Nanterrequiprotege.png,"Sécurité, tranquillité et prévention",Conforter les actions de prévention et de médiation en les coordonnant avec le travail des Polices nationale et municipale,
+Nanterre qui protège,Nanterrequiprotege.png,"Sécurité, tranquillité et prévention",Renforcer la lutte contre le stationnement sauvage grâce à la vidéoverbalisation,
+Nanterre qui protège,Nanterrequiprotege.png,"Sécurité, tranquillité et prévention","Créer une brigade de l’environnement composée de gardes champêtres, chargée notamment de lutter contre les dépôts sauvages",
+Nanterre qui protège,Nanterrequiprotege.png,"Sécurité, tranquillité et prévention",Poursuivre les actions menées contre la vente à la sauvette aux abords des gares et des marchés,
+Nanterre qui protège,Nanterrequiprotege.png,"Sécurité, tranquillité et prévention",Développer le concept des rues aux enfants pour sécuriser et pacifier les abords des écoles,
+Nanterre qui protège,Nanterrequiprotege.png,"Sécurité, tranquillité et prévention",Lutter contre l'affichage sauvage,
+Nanterre qui protège,Nanterrequiprotege.png,"Sécurité, tranquillité et prévention",Mettre en place des campagnes de sensibilisation et de communication contre les incivilités,
+Nanterre qui protège,Nanterrequiprotege.png,"Sécurité, tranquillité et prévention",Développer des patrouilles de Police Municipale à vélo,
+Nanterre qui protège,Nanterrequiprotege.png,"Sécurité, tranquillité et prévention",Poursuivre la lutte contre les incivilités occasionnées par certains commerces,
+Nanterre qui protège,Nanterrequiprotege.png,Emploi & formation,Agir pour l'accès à l'emploi et à  la formation,Renforcer les clauses d'insertion dans les commandes publiques
+Nanterre qui protège,Nanterrequiprotege.png,Emploi & formation,Agir pour l'accès à l'emploi et à  la formation,Maintenir l'exigence d'heures d'insertion sur les chantiers d'envergure réalisés à Nanterre
+Nanterre qui protège,Nanterrequiprotege.png,Emploi & formation,Agir pour l'accès à l'emploi et à  la formation,Créer un forum de stages et de l'alternance en lien avec les acteurs économiques du territoire
+Nanterre qui protège,Nanterrequiprotege.png,Emploi & formation,Agir pour l'accès à l'emploi et à  la formation,Soutenir l'économie sociale et solidaire par la commande publique et les dispositifs existants
+Nanterre qui protège,Nanterrequiprotege.png,Emploi & formation,Agir pour l'accès à l'emploi et à  la formation,Pérenniser le soutien à la Maison de l'emploi et de la formation qui accompagne notamment les personnes les plus éloignées de l'emploi
+Nanterre qui protège,Nanterrequiprotege.png,Emploi & formation,Agir pour l'accès à l'emploi et à  la formation,Faciliter l'accès à l'emploi des personnes en situation de handicap en poursuivant le forum emploi-handicap et en rendant les actions des opérateurs plus accessibles
+Nanterre qui protège,Nanterrequiprotege.png,Santé,Conforter le modèle des centres municipaux de santé pour lutter contre les déserts médicaux à Nanterre,
+Nanterre qui protège,Nanterrequiprotege.png,Santé,"Soutenir l’installation de professionnels de santé médicaux et paramédicaux : généralistes, pédiatres, orthophonistes",
+Nanterre qui protège,Nanterrequiprotege.png,Santé,Faire de la santé mentale un axe majeur de nos politiques de santé,
+Nanterre qui protège,Nanterrequiprotege.png,Santé,Conforter le fonctionnement du centre médico-sportif au Palais des Sports,
+Nanterre qui protège,Nanterrequiprotege.png,Santé,Encourager le dépistage et la vaccination contre le papillomavirus,
+Nanterre qui protège,Nanterrequiprotege.png,Solidarités,"Mettre en place un Pass’Solidaire, conditionné au niveau de ressources, pour soutenir financièrement l’inscription des enfants de 6 à 11 ans dans une association sportive ou culturelle locale",
+Nanterre qui protège,Nanterrequiprotege.png,Solidarités,"Déployer un plan d’actions pour les familles monoparentales autour du logement, de la vie quotidienne, de l’accès aux droits, de l’information, de l’emploi et du lien social avec la création d’un poste dédié au sein du Centre communal d’action sociale",
+Nanterre qui protège,Nanterrequiprotege.png,Solidarités,Créer un plan d’aide alimentaire avec pour objectif de tendre vers une sécurité sociale alimentaire,
+Nanterre qui protège,Nanterrequiprotege.png,Handicap,Créer un conseil citoyen de l’inclusion pour mieux prendre en compte les besoins réels,
+Nanterre qui protège,Nanterrequiprotege.png,Handicap,Accompagner les parents dans l’inclusion des enfants en situation de handicap dans les séjours de vacances,
+Nanterre qui protège,Nanterrequiprotege.png,Handicap,Favoriser la pratique du sport-handicap à Nanterre,
+Nanterre qui protège,Nanterrequiprotege.png,Handicap,Planifier la mise en accessibilité de l’ensemble des écoles pour les enfants en situation de handicap,
+Nanterre qui protège,Nanterrequiprotege.png,Handicap,Systématiser les jeux inclusifs dans les nouvelles aires,
+Nanterre qui protège,Nanterrequiprotege.png,Handicap,Poursuivre la mise en accessibilité de l’espace public et des équipements municipaux,
+Nanterre qui protège,Nanterrequiprotege.png,Handicap,"Créer un réseau des parents concernés en s’appuyant sur l’expertise de ceux qui vivent cette situation et qui connaissent les leviers, pour les informer",
+Nanterre qui protège,Nanterrequiprotege.png,Séniors,Maintenir et développer les activités et services proposés aux séniors,
+Nanterre qui protège,Nanterrequiprotege.png,Séniors,Conforter l’espace amitié et loisirs et les foyers restaurants,
+Nanterre qui protège,Nanterrequiprotege.png,Séniors,Poursuivre le portage de repas à domicile,
+Nanterre qui protège,Nanterrequiprotege.png,Séniors,Maintenir la sortie annuelle de printemps,
+Nanterre qui protège,Nanterrequiprotege.png,Séniors,Maintenir les festivités,
+Nanterre qui protège,Nanterrequiprotege.png,Séniors,Pérenniser les séjours dédiés aux séniors,
+Nanterre qui protège,Nanterrequiprotege.png,Séniors,Poursuivre la mise en accessibilité des espaces publics,
+Nanterre qui protège,Nanterrequiprotege.png,Séniors,Développer des projets d’habitat inclusif et d’habitat intergénérationnel,
+Nanterre qui fait face,Nanterrequifaitface.png,La nature et le vivant,Protéger et développer la nature en ville,Déployer un nouveau plan 5 000 arbres
+Nanterre qui fait face,Nanterrequifaitface.png,La nature et le vivant,Protéger et développer la nature en ville,Créer deux forêts urbaines sur d’anciens sites pétroliers (avenue Jules-Quentin et rue Jean-Perrin) et exiger leur financement par les industries pétrolières
+Nanterre qui fait face,Nanterrequifaitface.png,La nature et le vivant,Protéger et développer la nature en ville,Accélérer la végétalisation des cours d’école en passant de 2 à 3 par an
+Nanterre qui fait face,Nanterrequifaitface.png,La nature et le vivant,Protéger et développer la nature en ville,Poursuivre l’objectif de zéro artificialisation nette avec des actions de renaturation et de désimperméabilisation des sols
+Nanterre qui fait face,Nanterrequifaitface.png,La nature et le vivant,Protéger et développer la nature en ville,Aménager 20 nouveaux hectares d’espaces verts dans la ville
+Nanterre qui fait face,Nanterrequifaitface.png,La nature et le vivant,Faire de la Seine et des espaces verts des lieux de vie,Mobiliser le Département pour aménager les berges de Seine et en faire des espaces de loisirs et de balades
+Nanterre qui fait face,Nanterrequifaitface.png,La nature et le vivant,Faire de la Seine et des espaces verts des lieux de vie,Mieux faire connaître et simplifier le permis de végétaliser afin de permettre à chaque habitant.e de s’engager
+Nanterre qui fait face,Nanterrequifaitface.png,La nature et le vivant,Faire de la Seine et des espaces verts des lieux de vie,Impliquer les enfants dans la végétalisation des cours d’écoles pour apprendre la nature par la pratique
+Nanterre qui fait face,Nanterrequifaitface.png,La nature et le vivant,Faire de la Seine et des espaces verts des lieux de vie,Pérenniser le festival Ecozone et la Ferme géante
+Nanterre qui fait face,Nanterrequifaitface.png,La nature et le vivant,Faire de la Seine et des espaces verts des lieux de vie,Prolonger la Bourse de la Transition ƒcologique et le financement de ses projets
+Nanterre qui fait face,Nanterrequifaitface.png,La nature et le vivant,Faire de la Seine et des espaces verts des lieux de vie,Classer les espaces naturels des centres de vacances afin de préserver la biodiversité
+Nanterre qui fait face,Nanterrequifaitface.png,La nature et le vivant,Faire de la Seine et des espaces verts des lieux de vie,"Lutter contre la prolifération des rats, des moustiques, des punaises de lit et des frelons asiatiques"
+Nanterre qui fait face,Nanterrequifaitface.png,La nature et le vivant,Faire de la Seine et des espaces verts des lieux de vie,Continuer de développer les jardins partagés
+Nanterre qui fait face,Nanterrequifaitface.png,La nature et le vivant,Mieux protéger les animaux en ville,Créer une délégation à la protection du vivant et au bien-être animal
+Nanterre qui fait face,Nanterrequifaitface.png,La nature et le vivant,Mieux protéger les animaux en ville,Créer des caniparcs dans la ville
+Nanterre qui fait face,Nanterrequifaitface.png,La nature et le vivant,Mieux protéger les animaux en ville,Contractualiser avec des associations pour la gestion et la stérilisation des chats errants
+Nanterre qui fait face,Nanterrequifaitface.png,La nature et le vivant,Mieux protéger les animaux en ville,Confirmer l’arrêt de l’euthanasie des pigeons et porter auprès de POLD le déploiement de pigeonniers
+Nanterre qui fait face,Nanterrequifaitface.png,La nature et le vivant,Mieux protéger les animaux en ville,"Développer la médiation animale avec les écoles, les EHPAD, les structures sociales et dans les quartiers prioritaires"
+Nanterre qui fait face,Nanterrequifaitface.png,Une ville sobre et agréable,Mieux gérer les énergies,Faire aboutir le projet de réseau public local de géothermie
+Nanterre qui fait face,Nanterrequifaitface.png,Une ville sobre et agréable,Mieux gérer les énergies,Poursuivre la modernisation de l’éclairage public avec un objectif de passage à 100% LED sur le réseau communal d’ici la fin du mandat
+Nanterre qui fait face,Nanterrequifaitface.png,Une ville sobre et agréable,Mieux gérer les énergies,Poursuivre le plan de rénovation thermique du patrimoine communal
+Nanterre qui fait face,Nanterrequifaitface.png,Une ville sobre et agréable,Mieux gérer les énergies,Lutter contre la pollution lumineuse : extinction des lumières des bureaux et commerces
+Nanterre qui fait face,Nanterrequifaitface.png,Une ville sobre et agréable,Mieux gérer les énergies,"Inciter les bailleurs à accélérer la rénovation thermique des logements, à l’instar de Nanterre Coop Habitat"
+Nanterre qui fait face,Nanterrequifaitface.png,Une ville sobre et agréable,Mieux gérer les énergies,Proposer un accompagnement technique et social renforcé aux ménages modestes pour lutter contre la précarité énergétique
+Nanterre qui fait face,Nanterrequifaitface.png,Une ville sobre et agréable,Mieux gérer les énergies,Sensibiliser les commerçant.e.s à la réduction des écrans lumineux
+Nanterre qui fait face,Nanterrequifaitface.png,Une ville sobre et agréable,Mieux gérer les énergies,Lutter contre la publicité dans l’espace public et se mobiliser auprès de POLD pour faire évoluer le Règlement Local de Publicité Intercommunal
+Nanterre qui fait face,Nanterrequifaitface.png,Une ville sobre et agréable,Mieux gérer les énergies,S’engager à ne déployer aucun écran publicitaire vidéo dans l’espace public sur l’ensemble du mandat
+Nanterre qui fait face,Nanterrequifaitface.png,Une ville sobre et agréable,Veiller à la qualité de l'alimentation et à la gestion des déchets,"Renforcer la qualité de l’alimentation dans la restauration collective, avec un objectif de 70% de produits durables, locaux et équitables dont 40% de bio"
+Nanterre qui fait face,Nanterrequifaitface.png,Une ville sobre et agréable,Veiller à la qualité de l'alimentation et à la gestion des déchets,Étudier la faisabilité d’une ferme municipale garantissant une partie de l’approvisionnement de la cuisine centrale
+Nanterre qui fait face,Nanterrequifaitface.png,Une ville sobre et agréable,Veiller à la qualité de l'alimentation et à la gestion des déchets,Étendre les points d’apport volontaire pour les déchets alimentaires afin de faciliter le tri
+Nanterre qui fait face,Nanterrequifaitface.png,Une ville sobre et agréable,Veiller à la qualité de l'alimentation et à la gestion des déchets,Se mobiliser auprès de POLD pour la mise en place d’une redevance incitative sur les ordures ménagères
+Nanterre qui fait face,Nanterrequifaitface.png,Une ville sobre et agréable,Veiller à la qualité de l'alimentation et à la gestion des déchets,Adapter la collecte des déchets pour améliorer le tri et réduire les volumes d’ordures ménagères
+Nanterre qui fait face,Nanterrequifaitface.png,Une ville sobre et agréable,Veiller à la qualité de l'alimentation et à la gestion des déchets,Expérimenter la consigne du verre dans les commerces et les services municipaux
+Nanterre qui fait face,Nanterrequifaitface.png,Une ville sobre et agréable,Des espaces publics agréables,"Poursuivre la pacification progressive du centre ancien, en associant habitant.e.s et commerçant.e.s,  pour aller vers une piétonisation inclusive"
+Nanterre qui fait face,Nanterrequifaitface.png,Une ville sobre et agréable,Des espaces publics agréables,"Développer un fleurissement durable, adapté au climat et économe en ressources"
+Nanterre qui fait face,Nanterrequifaitface.png,Une ville sobre et agréable,Des espaces publics agréables,Remplacer les anciens terrains synthétiques par des équipements utilisant des matériaux biosourcés en évaluant systématiquement les impacts environnementaux pour privilégier les moins polluants
+Nanterre qui fait face,Nanterrequifaitface.png,Une ville sobre et agréable,Des espaces publics agréables,Créer des réservoirs d’eau destinés à l’arrosage
+Nanterre qui fait face,Nanterrequifaitface.png,Une ville sobre et agréable,Conforter la santé environnementale,"Mettre en place une politique municipale de santé environnementale comprenant une cartographie publique des pollutions, des études d’impact sanitaire en amont des projets urbains et associant des habitant.e.s aux décisions"
+Nanterre qui fait face,Nanterrequifaitface.png,Une ville sobre et agréable,Conforter la santé environnementale,Élaborer un plan climat-air-énergie à l’échelle de Nanterre
+Nanterre qui fait face,Nanterrequifaitface.png,Une ville sobre et agréable,Soutenir l'économie circulaire,Continuer de développer l’économie circulaire en valorisant et en référençant les lieux existant sur le territoire
+Nanterre qui fait face,Nanterrequifaitface.png,Une ville sobre et agréable,Soutenir l'économie circulaire,Créer une foncière communale pour maîtriser les implantations commerciales et favoriser les activités de l’économie sociale et solidaire
+Nanterre qui fait face,Nanterrequifaitface.png,Aménagement & urbanisme,Transformer la ville de manière équilibrée,"Poursuivre les programmes de renouvellement urbain des quartiers populaires notamment à Pablo-Picasso, au Chemin de l'île et à Anatole-France"
+Nanterre qui fait face,Nanterrequifaitface.png,Aménagement & urbanisme,Transformer la ville de manière équilibrée,Aménager 20 hectares d'espaces verts dans la ville
+Nanterre qui fait face,Nanterrequifaitface.png,Aménagement & urbanisme,Transformer la ville de manière équilibrée,Mener à bien le projet du Delta vert
+Nanterre qui fait face,Nanterrequifaitface.png,Aménagement & urbanisme,Transformer la ville de manière équilibrée,Généraliser la conception égalitaire et l'aménagement des espaces publics à hauteur d'enfant
+Nanterre qui fait face,Nanterrequifaitface.png,Aménagement & urbanisme,Transformer la ville de manière équilibrée,Poursuivre la transformation du secteur de l'hôpital de Nanterre
+Nanterre qui fait face,Nanterrequifaitface.png,Aménagement & urbanisme,Transformer la ville de manière équilibrée,"Engager le réaménagement du secteur de l'hôtel de ville en intégrant logements, équipements scolaires et végétalisation"
+Nanterre qui fait face,Nanterrequifaitface.png,Aménagement & urbanisme,Transformer la ville de manière équilibrée,Mener à bien le réaménagement du secteur Sadi-Carnot avec la création de logements et d'un parc
+Nanterre qui fait face,Nanterrequifaitface.png,Aménagement & urbanisme,Transformer la ville de manière équilibrée,Poursuivre les actions de lutte contre les îlots de chaleur
+Nanterre qui fait face,Nanterrequifaitface.png,Aménagement & urbanisme,Exiger la mobilisation de tous,Se mobiliser auprès de Hauts-de-Seine Habitat pour la rénovation de la cité du Vieux-Pont
+Nanterre qui fait face,Nanterrequifaitface.png,Aménagement & urbanisme,Exiger la mobilisation de tous,"Engager la réflexion avec Nanterre Coop Habitat, La Sablière et Seqens sur la rénovation de la cité Berthelot"
+Nanterre qui fait face,Nanterrequifaitface.png,Aménagement & urbanisme,Exiger la mobilisation de tous,Accélérer la rénovation des équipements communaux ainsi que des logements sociaux et privés en portant une attention particulière aux quartiers populaires
+Nanterre qui fait face,Nanterrequifaitface.png,Se déplacer autrement,Accompagner l'arrivée du tramway à l'horizon 2031 qui facilitera les déplacements entre les différents quartiers de la ville en venant les recoudre les uns aux autres,
+Nanterre qui fait face,Nanterrequifaitface.png,Se déplacer autrement,"Poursuivre le plan vélo avec un nouvel investissement de 5 millions d'euros d'ici 2032 pour des itinéraires continus, sécurisés et lisibles",
+Nanterre qui fait face,Nanterrequifaitface.png,Se déplacer autrement,Accompagner l'arrivée de nouvelles infrastructures de transport comme la ligne 15 Ouest du Grand Paris Express à l'horizon 2031,
+Nanterre qui fait face,Nanterrequifaitface.png,Se déplacer autrement,Poursuivre le développement des zones 30 sur l'ensemble des voies communales hors grands axes afin de garantir qu'elles ne soient pas proposées au report par les applications de navigation,
+Nanterre qui fait face,Nanterrequifaitface.png,Se déplacer autrement,Développer les locaux pour les vélos dans le patrimoine existant notamment des bailleurs sociaux,
+Nanterre qui crée du lien,Nanterrequicreedulien.png,Bien grandir à Nanterre,Être attentif aux conditions d'accueil des tout-petits,Augmenter le nombre de places en crèche
+Nanterre qui crée du lien,Nanterrequicreedulien.png,Bien grandir à Nanterre,Être attentif aux conditions d'accueil des tout-petits,Renforcer les actions de recrutement des professionnels de la petite enfance
+Nanterre qui crée du lien,Nanterrequicreedulien.png,Bien grandir à Nanterre,Être attentif aux conditions d'accueil des tout-petits,Soutenir l'installation de Maisons d'assistantes maternelles
+Nanterre qui crée du lien,Nanterrequicreedulien.png,Bien grandir à Nanterre,Priorité à la réussite éducative,Fournir à tous les enfants du CP au CM2 un kit de fournitures scolaires gratuit
+Nanterre qui crée du lien,Nanterrequicreedulien.png,Bien grandir à Nanterre,Priorité à la réussite éducative,"Instaurer un rendez-vous annuel entre la ville, les représentants de parents d’élèves et les équipes éducatives"
+Nanterre qui crée du lien,Nanterrequicreedulien.png,Bien grandir à Nanterre,Priorité à la réussite éducative,Permettre à chaque enfant de vivre un voyage découverte lors de sa scolarité élémentaire à Nanterre
+Nanterre qui crée du lien,Nanterrequicreedulien.png,Bien grandir à Nanterre,Priorité à la réussite éducative,Agir auprès de l’Éducation nationale pour la création d’une classe spécialisée par collège pour lutter contre l’évitement scolaire
+Nanterre qui crée du lien,Nanterrequicreedulien.png,Bien grandir à Nanterre,Priorité à la réussite éducative,"Engager un plan d’actions contre le harcèlement scolaire et les violences faites aux enfants, associant formation, prévention et accompagnement"
+Nanterre qui crée du lien,Nanterrequicreedulien.png,Bien grandir à Nanterre,Priorité à la réussite éducative,Sensibiliser les enfants au tri sélectif et aux enjeux climatiques sur les temps scolaire et périscolaire
+Nanterre qui crée du lien,Nanterrequicreedulien.png,Bien grandir à Nanterre,Priorité à la réussite éducative,Développer le concept des rues aux enfants pour sécuriser et pacifier les abords des écoles
+Nanterre qui crée du lien,Nanterrequicreedulien.png,Bien grandir à Nanterre,L'école inclusive,Favoriser les doubles profils animateurs/AESH dans les centres de loisirs
+Nanterre qui crée du lien,Nanterrequicreedulien.png,Bien grandir à Nanterre,L'école inclusive,Agir auprès de l’Éducation nationale pour l’intégration d’un Institut Médico-Éducatif au sein d’une école
+Nanterre qui crée du lien,Nanterrequicreedulien.png,Bien grandir à Nanterre,L'école inclusive,Créer une unité éducative pour les enfants atteints de troubles autistiques au sein d’une école
+Nanterre qui crée du lien,Nanterrequicreedulien.png,Bien grandir à Nanterre,Des lieux adaptés pour mieux apprendre,"Des lieux adaptés pour mieux apprendre,Accélérer la végétalisation des cours d’école en passant de 2 à 3 réalisations par an"
+Nanterre qui crée du lien,Nanterrequicreedulien.png,Bien grandir à Nanterre,Des lieux adaptés pour mieux apprendre,"Accélérer la rénovation des crèches, des écoles et des centres de loisirs pour mieux faire face aux canicules"
+Nanterre qui crée du lien,Nanterrequicreedulien.png,Bien grandir à Nanterre,Des lieux adaptés pour mieux apprendre,"Engager la rénovation des groupes scolaires Paul-Langevin, Henri-Wallon et Anatole-France en végétalisant les cours"
+Nanterre qui crée du lien,Nanterrequicreedulien.png,Vivre sa jeunesse à Nanterre,Mettre en place un forum des stages et de l’alternance,
+Nanterre qui crée du lien,Nanterrequicreedulien.png,Vivre sa jeunesse à Nanterre,Élargir le Conseil municipal des Jeunes aux plus de 14 ans,
+Nanterre qui crée du lien,Nanterrequicreedulien.png,Vivre sa jeunesse à Nanterre,Associer le Conseil municipal des jeunes aux sujets de politique locale,
+Nanterre qui crée du lien,Nanterrequicreedulien.png,Vivre sa jeunesse à Nanterre,"Mettre en place une cérémonie d’entrée à la citoyenneté, avec remise de la carte d’électeur.ice à chaque Nanterrien.ne âgé.e de 18 ans",
+Nanterre qui crée du lien,Nanterrequicreedulien.png,Vivre sa jeunesse à Nanterre,"Rassembler les dispositifs en direction de la jeunesse dans une structure d’accueil unique facilitant l’accès au logement, à la santé et à la découverte des métiers",
+Nanterre qui crée du lien,Nanterrequicreedulien.png,Vivre sa jeunesse à Nanterre,Mettre à disposition du matériel de préparation à l’examen du code de la route dans les médiathèques,
+Nanterre qui crée du lien,Nanterrequicreedulien.png,Vivre sa jeunesse à Nanterre,Organiser chaque année une soirée des vœux dédiée à la jeunesse de Nanterre,
+Nanterre qui crée du lien,Nanterrequicreedulien.png,Vivre sa jeunesse à Nanterre,Proposer dans les espaces jeunesse des ateliers de sensibilisation aux fake news,
+Nanterre qui crée du lien,Nanterrequicreedulien.png,Vivre sa jeunesse à Nanterre,"Conforter le droit aux vacances et à la découverte, en proposant des séjours jeunesse durables et émancipateurs",
+Nanterre qui crée du lien,Nanterrequicreedulien.png,Vivre sa jeunesse à Nanterre,Redynamiser le Contrat Nanterrien de Réussite,
+Nanterre qui crée du lien,Nanterrequicreedulien.png,Vivre sa jeunesse à Nanterre,Développer la vie étudiante à Nanterre,
+Nanterre qui crée du lien,Nanterrequicreedulien.png,Sport,Rénover le stade Gabriel-Péri et le gymnase La Fontaine,
+Nanterre qui crée du lien,Nanterrequicreedulien.png,Sport,"Ouvrir trois nouveaux gymnases dans les quartiers du Vieux-Pont, du Parc Nord et des Groues",
+Nanterre qui crée du lien,Nanterrequicreedulien.png,Sport,Dédier une partie des créneaux dans les installations de proximité aux associations de quartier,
+Nanterre qui crée du lien,Nanterrequicreedulien.png,Sport,"Continuer d’accueillir des événements sportifs féminins, y compris de haut niveau",
+Nanterre qui crée du lien,Nanterrequicreedulien.png,Sport,Conforter les actions de sport-santé avec l’OMEPS pour les personnes sédentaires ou malades,
+Nanterre qui crée du lien,Nanterrequicreedulien.png,Sport,Favoriser l’action des éducateur. rice.s sportifs.ve.s dans les écoles élémentaires en complément des professeur.e.s,
+Nanterre qui crée du lien,Nanterrequicreedulien.png,Sport,Accompagner la création d’un club de eSport à Nanterre,
+Nanterre qui crée du lien,Nanterrequicreedulien.png,Sport,"Soutenir les événements valorisant les sportives et sportifs de Nanterre, y compris de haut-niveau",
+Nanterre qui crée du lien,Nanterrequicreedulien.png,Sport,Créer une journée du sport féminin à Nanterre,
+Nanterre qui crée du lien,Nanterrequicreedulien.png,Sport,"Poursuivre le soutien au club de basket et l’accompagner dans son développement (basket féminin, basket fauteuil)",
+Nanterre qui crée du lien,Nanterrequicreedulien.png,Sport,Organiser une soirée des trophées avec le mouvement sportif,
+Nanterre qui crée du lien,Nanterrequicreedulien.png,Démocratie participative,Mettre en place la votation d’initiative citoyenne à partir de 1 000 signatures,
+Nanterre qui crée du lien,Nanterrequicreedulien.png,Démocratie participative,Lancer une grande consultation à destination des habitants : Vivre à Nanterre en 2050,
+Nanterre qui crée du lien,Nanterrequicreedulien.png,Démocratie participative,Poursuivre la concertation des habitant.e.s dans l’ensemble des projets municipaux,
+Nanterre qui crée du lien,Nanterrequicreedulien.png,Démocratie participative,Repenser les conseils de quartier avec un objectif de trois conseils par an et la constitution de collectifs citoyens d'animation,
+Nanterre qui crée du lien,Nanterrequicreedulien.png,Démocratie participative,Mettre en place des solutions de gardes d’enfants pendant les grands temps de démocratie participative,
+Nanterre qui crée du lien,Nanterrequicreedulien.png,Démocratie participative,"Étudier la création d’une assemblée citoyenne, ouverte aux résident.e.s étranger.e.s, qui fera des propositions aux élu.e.s",
+Nanterre qui crée du lien,Nanterrequicreedulien.png,Une ville à l'écoute,Redéfinir le parcours usager avec un principe clair : 1 sollicitation = 1 réponse,
+Nanterre qui crée du lien,Nanterrequicreedulien.png,Une ville à l'écoute,Réduire le délai de traitement des demandes adressées à la Ville,
+Nanterre qui crée du lien,Nanterrequicreedulien.png,Faire vivre le commerce de proximité et l'économie sociale et solidaire (ESS),Accompagner les commerçant.e.s,"Accompagner les commerçant.e.s,Mettre en place une foncière solidaire et commerciale afin de maîtriser les loyers, lutter contre la vacance et faciliter l'installation de nouvelles activités"
+Nanterre qui crée du lien,Nanterrequicreedulien.png,Faire vivre le commerce de proximité et l'économie sociale et solidaire (ESS),Accompagner les commerçant.e.s,Renforcer les animations commerciales dans les quartiers en lien avec les associations de commerçant.e.s
+Nanterre qui crée du lien,Nanterrequicreedulien.png,Faire vivre le commerce de proximité et l'économie sociale et solidaire (ESS),Accompagner les commerçant.e.s,Développer une boutique éphémère pour accompagner les créateur.rice.s et artisan.e.s
+Nanterre qui crée du lien,Nanterrequicreedulien.png,Faire vivre le commerce de proximité et l'économie sociale et solidaire (ESS),Accompagner les commerçant.e.s,Créer une journée partenariale avec les associations de commerçant.e.s
+Nanterre qui crée du lien,Nanterrequicreedulien.png,Faire vivre le commerce de proximité et l'économie sociale et solidaire (ESS),Accompagner les commerçant.e.s,"Accompagner les commerçant.e.s,Soutenir le commerce de proximité à travers la communication municipale"
+Nanterre qui crée du lien,Nanterrequicreedulien.png,Faire vivre le commerce de proximité et l'économie sociale et solidaire (ESS),Accompagner les commerçant.e.s,Poursuivre la démarche des Ecos-défis en valorisant les engagements des commerçant.e.s et artisan.e.s en faveur du développement durable
+Nanterre qui crée du lien,Nanterrequicreedulien.png,Faire vivre le commerce de proximité et l'économie sociale et solidaire (ESS),Accompagner les commerçant.e.s,"Développer des projets d'embellissement artistique, notamment par des fresques urbaines "
+Nanterre qui crée du lien,Nanterrequicreedulien.png,Faire vivre le commerce de proximité et l'économie sociale et solidaire (ESS),Accompagner les commerçant.e.s,Structurer un parcours commerçant valorisant l'ensemble des quartiers de la Ville
+Nanterre qui crée du lien,Nanterrequicreedulien.png,Faire vivre le commerce de proximité et l'économie sociale et solidaire (ESS),Accompagner les commerçant.e.s,Mobiliser les dispositifs de subvention pour embellir les devantures
+Nanterre qui crée du lien,Nanterrequicreedulien.png,Faire vivre le commerce de proximité et l'économie sociale et solidaire (ESS),Renforcer et valoriser l'ESS,"Favoriser les partenariats entre entreprises, commerces et acteurs de l'ESS au service de projets d'intérêt collectif"
+Nanterre qui crée du lien,Nanterrequicreedulien.png,Faire vivre le commerce de proximité et l'économie sociale et solidaire (ESS),Renforcer et valoriser l'ESS,Renforcer la synergie entre les lieux de l'ESS présents sur le territoire
+Nanterre qui crée du lien,Nanterrequicreedulien.png,Faire vivre le commerce de proximité et l'économie sociale et solidaire (ESS),Renforcer et valoriser l'ESS,"Accompagner le développement de tiers-lieux et y soutenir les initiatives portées par les habitant.e.s, notamment autour du ré-emploi et de l'économie circulaire"
+Nanterre qui crée du lien,Nanterrequicreedulien.png,Faire vivre le commerce de proximité et l'économie sociale et solidaire (ESS),Renforcer et valoriser l'ESS,Poursuivre le développement de l'économie circulaire en valorisant et en référençant les initiatives existantes
+Nanterre qui crée du lien,Nanterrequicreedulien.png,Egalité & lutte contre les discriminations,"Former les agents municipaux à la prévention, l’analyse et la résolution des situations de discrimination",
+Nanterre qui crée du lien,Nanterrequicreedulien.png,Egalité & lutte contre les discriminations,Identifier et signaler des lieux refuges pour renforcer la sécurité des personnes LGBTQIA+,
+Nanterre qui crée du lien,Nanterrequicreedulien.png,Egalité & lutte contre les discriminations,Lutter contre la fracture numérique,
+Nanterre qui crée du lien,Nanterrequicreedulien.png,Egalité & lutte contre les discriminations,Poursuivre la mobilisation de la Ville à travers les journées du programme Nanterre lutte pour l’égalité,
+Nanterre qui crée du lien,Nanterrequicreedulien.png,Vie associative,Maintenir la fête de l’engagement comme temps fort de la vie associative,
+Nanterre qui crée du lien,Nanterrequicreedulien.png,Vie associative,Poursuivre le programme de formation à destination des bénévoles,
+Nanterre qui crée du lien,Nanterrequicreedulien.png,Vie associative,Ouvrir une nouvelle salle associative dans le quartier du Vieux-Pont,
+Nanterre qui crée du lien,Nanterrequicreedulien.png,Vie associative,Poursuivre le soutien aux actions d’accès aux droits,
+Nanterre qui crée du lien,Nanterrequicreedulien.png,Faire vivre toutes les mémoires,Travail mémoriel,Poursuivre le travail mémoriel engagé par La Ville avec les habitant.e.s et les associations
+Nanterre qui crée du lien,Nanterrequicreedulien.png,Faire vivre toutes les mémoires,Travail mémoriel,Inscrire la mémoire des bidonvilles dans l’espace public
+Nanterre qui crée du lien,Nanterrequicreedulien.png,Faire vivre toutes les mémoires,Transmission,Associer davantage les écoles et/ou collèges aux commémorations
+Nanterre qui crée du lien,Nanterrequicreedulien.png,Faire vivre toutes les mémoires,Transmission,Construire avec les enfants un dictionnaire participatif des noms de rues
+Nanterre qui crée du lien,Nanterrequicreedulien.png,Faire vivre toutes les mémoires,Transmission,Ajouter une biographie aux nouvelles plaques de rues
+Nanterre qui crée du lien,Nanterrequicreedulien.png,Ville-monde,Renforcer les coopérations internationales,Formaliser et consolider le jumelage avec la ville d'Aïzaria en Palestine
+Nanterre qui crée du lien,Nanterrequicreedulien.png,Ville-monde,Renforcer les coopérations internationales,Lancer un financement participatif à destination des Nanterrien.ne.s pour soutenir le projet d'accès à l'eau potable à Aïzaria
+Nanterre qui crée du lien,Nanterrequicreedulien.png,Ville-monde,Renforcer les coopérations internationales,"Développer et structurer les échanges de jeunes avec les villes jumelées, notamment autour de la culture, du sport et de la citoyenneté"
+Nanterre qui crée du lien,Nanterrequicreedulien.png,Ville-monde,Faire vivre les valeurs de solidarité et de droits humains,Conditionner les achats publics et les partenariats municipaux au respect des droits humains et des principes fondamentaux de solidarité internationale
+Nanterre qui résiste,Nanterrequiresiste.png,Nos combats,Amplifier la mobilisation municipale sur les titres de séjour et accompagner les habitant·e·s dans leurs démarches de renouvellement,
+Nanterre qui résiste,Nanterrequiresiste.png,Nos combats,"Étudier la mise en place d’un dispositif de type Fonds de solidarité Logement, sous conditions, pour les personnes en rupture de droits du fait de l’allongement des délais de traitement de leur demande de renouvellement",
+Nanterre qui résiste,Nanterrequiresiste.png,Nos combats,Se mobiliser pour garantir un haut niveau de subvention de l’État pour les associations,
+Nanterre qui résiste,Nanterrequiresiste.png,Nos combats,Poursuivre la mobilisation contre les coupes budgétaires,
+Nanterre qui résiste,Nanterrequiresiste.png,Nos combats,Continuer à se mobiliser contre le non-remplacement des enseignant·es,
+Nanterre qui résiste,Nanterrequiresiste.png,Nos combats,Poursuivre la vigilance et la mobilisation contre les fermetures de classes,
+Nanterre qui résiste,Nanterrequiresiste.png,Nos combats,Contribuer à lancer un mouvement des villes résistantes/refuges face aux dangers de l’extrême-droite,
+Nanterre qui résiste,Nanterrequiresiste.png,Nos combats,Poursuivre la mobilisation pour l’accès au droit des personnes porteuses de handicap pour l’obtention de moyens pour la Maison Départementale des Personnes Handicapées,
+Nanterre qui résiste,Nanterrequiresiste.png,Nos combats,Mettre en place une charte de transparence de la vie publique signée par l’ensemble des élu·e·s de la majorité,
+Nanterre qui résiste,Nanterrequiresiste.png,Nos combats,Participer aux mobilisations visant à lutter contre toutes les formes de discrimination,
+Nanterre qui résiste,Nanterrequiresiste.png,Nos combats,Exiger un moratoire sur les fermetures de classes dans le 1er degré,
+Nanterre qui résiste,Nanterrequiresiste.png,Nos combats,Se mobiliser en faveur du droit de vote et d’éligibilité des résidents étrangers aux élections locales,
+Nanterre qui résiste,Nanterrequiresiste.png,Nos combats,S’associer aux mobilisations en faveur de la paix et du droit international,

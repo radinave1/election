@@ -75,27 +75,31 @@ function initNavigation() {
     const navLinks = document.querySelectorAll('.nav-link');
 
     // Scroll effect on navbar
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 100) {
-            navbar.classList.add('scrolled');
-        } else {
-            navbar.classList.remove('scrolled');
-        }
-    });
+    if (navbar) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 100) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+        });
+    }
 
     // Mobile menu toggle
-    navToggle.addEventListener('click', () => {
-        navToggle.classList.toggle('active');
-        navMenu.classList.toggle('active');
-    });
-
-    // Close mobile menu on link click
-    navLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            navToggle.classList.remove('active');
-            navMenu.classList.remove('active');
+    if (navToggle && navMenu) {
+        navToggle.addEventListener('click', () => {
+            navToggle.classList.toggle('active');
+            navMenu.classList.toggle('active');
         });
-    });
+
+        // Close mobile menu on link click
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navToggle.classList.remove('active');
+                navMenu.classList.remove('active');
+            });
+        });
+    }
 
     // Active link on scroll
     const sections = document.querySelectorAll('section[id]');
@@ -162,15 +166,19 @@ function initSlider() {
     }
 
     // Button events
-    nextBtn.addEventListener('click', () => {
-        nextSlide();
-        resetAutoplay();
-    });
+    if (nextBtn) {
+        nextBtn.addEventListener('click', () => {
+            nextSlide();
+            resetAutoplay();
+        });
+    }
 
-    prevBtn.addEventListener('click', () => {
-        prevSlide();
-        resetAutoplay();
-    });
+    if (prevBtn) {
+        prevBtn.addEventListener('click', () => {
+            prevSlide();
+            resetAutoplay();
+        });
+    }
 
     // Autoplay
     function startAutoplay() {
@@ -186,8 +194,10 @@ function initSlider() {
 
     // Pause on hover
     const heroSection = document.querySelector('.hero-section');
-    heroSection.addEventListener('mouseenter', () => clearInterval(autoplayInterval));
-    heroSection.addEventListener('mouseleave', startAutoplay);
+    if (heroSection) {
+        heroSection.addEventListener('mouseenter', () => clearInterval(autoplayInterval));
+        heroSection.addEventListener('mouseleave', startAutoplay);
+    }
 }
 
 // ========================================
@@ -313,7 +323,7 @@ async function loadAllEquipe() {
 }
 
 // ========================================
-// Engagement
+// Engagement - Home page (grands thèmes cards)
 // ========================================
 
 async function loadEngagement() {
@@ -330,39 +340,213 @@ async function loadEngagement() {
         return;
     }
 
-    // Group by theme
-    const themes = {};
-    points.forEach(point => {
-        const theme = point.theme || 'Divers';
-        if (!themes[theme]) {
-            themes[theme] = {
-                icon: point.icone || '📌',
-                points: []
+    // Group by grand_theme
+    const grandThemes = {};
+    points.forEach(row => {
+        const gt = row.grand_theme || 'Divers';
+        if (!grandThemes[gt]) {
+            grandThemes[gt] = {
+                icone: row.icone || '',
+                themes: new Set(),
+                count: 0
             };
         }
-        themes[theme].points.push(point.point || point.description || '');
+        if (row.theme) grandThemes[gt].themes.add(row.theme);
+        // Count actual engagement points (rows with a non-empty point, or 4-col rows where sous_theme holds the point)
+        const pointText = row.point || (row.sous_theme && !row.point ? row.sous_theme : '');
+        if (pointText) grandThemes[gt].count++;
     });
 
-    container.innerHTML = Object.entries(themes).map(([themeName, themeData], index) => `
-        <div class="engagement-theme fade-in ${index === 0 ? 'active' : ''}">
-            <div class="engagement-header" onclick="toggleEngagement(this)">
-                <div class="engagement-icon">${themeData.icon}</div>
-                <h3 class="engagement-theme-title">${themeName}</h3>
-                <div class="engagement-toggle">▼</div>
-            </div>
-            <div class="engagement-content">
-                <div class="engagement-points">
-                    ${themeData.points.map(point => `
-                        <div class="engagement-point">
-                            <span class="engagement-point-text">${point}</span>
-                        </div>
-                    `).join('')}
+    container.innerHTML = Object.entries(grandThemes).map(([name, data], index) => {
+        const themesPreview = [...data.themes].slice(0, 3);
+        const hasIcon = data.icone && data.icone.trim() !== '';
+        return `
+            <div class="engagement-grand-theme-card fade-in">
+                <div class="egt-card-icon">
+                    ${hasIcon
+                        ? `<img src="icones/${data.icone}" alt="${name}" onerror="this.style.display='none'">`
+                        : '<span>📌</span>'
+                    }
+                </div>
+                <div class="egt-card-body">
+                    <h3 class="egt-card-title">${name}</h3>
+                    <ul class="egt-card-themes">
+                        ${themesPreview.map(t => `<li>${t}</li>`).join('')}
+                        ${data.themes.size > 3 ? `<li class="egt-more">+ ${data.themes.size - 3} autres thèmes</li>` : ''}
+                    </ul>
+                </div>
+                <div class="egt-card-count">
+                    <span class="egt-count-number">${data.count}</span>
+                    <span class="egt-count-label">engagement${data.count > 1 ? 's' : ''}</span>
                 </div>
             </div>
-        </div>
-    `).join('');
+        `;
+    }).join('');
 
     initFadeInAnimation();
+}
+
+// ========================================
+// Engagement - Full page (engagements.html)
+// ========================================
+
+async function loadAllEngagements() {
+    const tabsContainer = document.getElementById('engagementsTabs');
+    const contentContainer = document.getElementById('engagementsPageContent');
+    if (!contentContainer) return;
+
+    const points = await loadCSV('data/programme.csv');
+
+    if (points.length === 0) {
+        contentContainer.innerHTML = `<div class="loading">Aucun engagement trouvé.</div>`;
+        return;
+    }
+
+    // Build structure: grandTheme -> theme -> sousTheme -> [points]
+    const structure = {};
+    const grandThemeOrder = [];
+    const grandThemeMeta = {};
+
+    points.forEach(row => {
+        const gt = row.grand_theme || 'Divers';
+        const theme = row.theme || '';
+        const sousTheme = row.sous_theme || '';
+        // For 4-col rows, the point text is in sous_theme column (no separate point)
+        const pointText = (row.point && row.point.trim())
+            ? row.point.trim()
+            : (row.sous_theme && !row.point ? row.sous_theme.trim() : '');
+
+        if (!structure[gt]) {
+            structure[gt] = {};
+            grandThemeOrder.push(gt);
+            grandThemeMeta[gt] = { icone: row.icone || '' };
+        }
+
+        if (!theme) return;
+
+        if (!structure[gt][theme]) {
+            structure[gt][theme] = {};
+        }
+
+        // For 4-col rows (sous_theme is actually the point text, point is empty)
+        const isDirectPoint = !row.point || row.point.trim() === '';
+
+        if (isDirectPoint) {
+            // Store directly under theme (no sous-theme)
+            const key = '__direct__';
+            if (!structure[gt][theme][key]) structure[gt][theme][key] = [];
+            if (sousTheme) structure[gt][theme][key].push(sousTheme);
+        } else {
+            // Has sous-theme and point
+            const st = sousTheme || '__direct__';
+            if (!structure[gt][theme][st]) structure[gt][theme][st] = [];
+            if (pointText) structure[gt][theme][st].push(pointText);
+        }
+    });
+
+    // Build tabs
+    if (tabsContainer) {
+        tabsContainer.innerHTML = grandThemeOrder.map((gt, i) => {
+            const meta = grandThemeMeta[gt];
+            const hasIcon = meta.icone && meta.icone.trim() !== '';
+            return `
+                <button class="eng-tab ${i === 0 ? 'active' : ''}" data-target="gt-${i}" onclick="switchEngagementTab(this, 'gt-${i}')">
+                    ${hasIcon ? `<img src="icones/${meta.icone}" alt="" class="eng-tab-icon" onerror="this.style.display='none'">` : ''}
+                    <span>${gt}</span>
+                </button>
+            `;
+        }).join('');
+    }
+
+    // Build content
+    contentContainer.innerHTML = grandThemeOrder.map((gt, gtIndex) => {
+        const themes = structure[gt];
+        const meta = grandThemeMeta[gt];
+        const hasIcon = meta.icone && meta.icone.trim() !== '';
+
+        const themesHtml = Object.entries(themes).map(([themeName, sousThemes], tIndex) => {
+            const sousThemesHtml = Object.entries(sousThemes).map(([stName, ptList]) => {
+                if (!ptList.length) return '';
+                const pointsHtml = ptList.map(p => `
+                    <div class="eng-point">
+                        <span class="eng-point-check">✓</span>
+                        <span class="eng-point-text">${p}</span>
+                    </div>
+                `).join('');
+
+                if (stName === '__direct__') {
+                    return `<div class="eng-points-list">${pointsHtml}</div>`;
+                }
+                return `
+                    <div class="eng-sous-theme">
+                        <h5 class="eng-sous-theme-title">${stName}</h5>
+                        <div class="eng-points-list">${pointsHtml}</div>
+                    </div>
+                `;
+            }).join('');
+
+            return `
+                <div class="eng-theme fade-in">
+                    <div class="eng-theme-header" onclick="toggleEngagementTheme(this)">
+                        <h4 class="eng-theme-title">${themeName}</h4>
+                        <span class="eng-theme-toggle">▼</span>
+                    </div>
+                    <div class="eng-theme-content">
+                        ${sousThemesHtml}
+                    </div>
+                </div>
+            `;
+        }).join('');
+
+        return `
+            <div class="eng-grand-theme" id="gt-${gtIndex}" ${gtIndex > 0 ? 'style="display:none"' : ''}>
+                <div class="eng-grand-theme-header fade-in">
+                    ${hasIcon ? `<div class="eng-grand-icon-circle"><img src="icones/${meta.icone}" alt="${gt}" class="eng-grand-icon"></div>` : ''}
+                    <div>
+                        <h2 class="eng-grand-title">${gt}</h2>
+                        <p class="eng-grand-count">${Object.keys(themes).length} thème${Object.keys(themes).length > 1 ? 's' : ''}</p>
+                    </div>
+                </div>
+                <div class="eng-themes-list">
+                    ${themesHtml}
+                </div>
+            </div>
+        `;
+    }).join('');
+
+    initFadeInAnimation();
+
+    // Open first theme of first grand theme by default
+    const firstThemeHeader = contentContainer.querySelector('.eng-theme-header');
+    if (firstThemeHeader) {
+        firstThemeHeader.parentElement.classList.add('active');
+    }
+}
+
+function toggleEngagementTheme(header) {
+    const theme = header.parentElement;
+    theme.classList.toggle('active');
+}
+
+function switchEngagementTab(btn, targetId) {
+    // Update tabs
+    document.querySelectorAll('.eng-tab').forEach(t => t.classList.remove('active'));
+    btn.classList.add('active');
+
+    // Show/hide grand themes
+    document.querySelectorAll('.eng-grand-theme').forEach(gt => {
+        gt.style.display = gt.id === targetId ? 'block' : 'none';
+    });
+
+    // Re-trigger fade-in for the newly shown content
+    initFadeInAnimation();
+
+    // Scroll to content
+    const content = document.getElementById('engagementsPageContent');
+    if (content) {
+        const offset = content.getBoundingClientRect().top + window.pageYOffset - 100;
+        window.scrollTo({ top: offset, behavior: 'smooth' });
+    }
 }
 
 function toggleEngagement(header) {
@@ -584,10 +768,13 @@ document.addEventListener('DOMContentLoaded', () => {
     if (document.getElementById('agendaGrid')) loadAgenda();
     if (document.getElementById('equipeGrid') && document.querySelector('.equipe-section:not(.equipe-page-section)')) loadEquipe();
     if (document.getElementById('engagementContainer')) loadEngagement();
+    if (document.getElementById('engagementsPageContent')) loadAllEngagements();
     if (document.getElementById('socialFeedGrid')) loadSocialFeed();
     
     console.log('✅ Site initialisé avec succès!');
 });
 
-// Make toggleEngagement available globally
+// Make functions available globally
 window.toggleEngagement = toggleEngagement;
+window.toggleEngagementTheme = toggleEngagementTheme;
+window.switchEngagementTab = switchEngagementTab;
