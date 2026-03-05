@@ -74,15 +74,43 @@ function initNavigation() {
     const navMenu = document.getElementById('navMenu');
     const navLinks = document.querySelectorAll('.nav-link');
 
-    // Scroll effect on navbar
+    // Scroll effect on navbar + active link — throttled via rAF
     if (navbar) {
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 100) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
-            }
-        });
+        const sections = document.querySelectorAll('section[id]');
+        let ticking = false;
+
+        const onScroll = () => {
+            if (ticking) return;
+            ticking = true;
+            requestAnimationFrame(() => {
+                const scrollY = window.scrollY;
+
+                // Navbar style
+                if (scrollY > 100) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+
+                // Active nav link
+                let current = '';
+                sections.forEach(section => {
+                    if (scrollY >= section.offsetTop - 150) {
+                        current = section.getAttribute('id');
+                    }
+                });
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === `#${current}`) {
+                        link.classList.add('active');
+                    }
+                });
+
+                ticking = false;
+            });
+        };
+
+        window.addEventListener('scroll', onScroll, { passive: true });
     }
 
     // Mobile menu toggle
@@ -100,26 +128,6 @@ function initNavigation() {
             });
         });
     }
-
-    // Active link on scroll
-    const sections = document.querySelectorAll('section[id]');
-    
-    window.addEventListener('scroll', () => {
-        let current = '';
-        sections.forEach(section => {
-            const sectionTop = section.offsetTop - 150;
-            if (window.scrollY >= sectionTop) {
-                current = section.getAttribute('id');
-            }
-        });
-
-        navLinks.forEach(link => {
-            link.classList.remove('active');
-            if (link.getAttribute('href') === `#${current}`) {
-                link.classList.add('active');
-            }
-        });
-    });
 }
 
 // ========================================
@@ -263,7 +271,7 @@ function renderMembreCard(membre, imagePath) {
     return `
         <article class="equipe-card fade-in">
             ${hasPhoto 
-                ? `<img src="${imagePath}${membre.photo}" alt="${membre.nom}" class="equipe-photo" onerror="this.outerHTML='<div class=\\'equipe-photo-placeholder\\'>${initials}</div>'">`
+                ? `<img src="${imagePath}${membre.photo}" alt="${membre.nom}" class="equipe-photo" loading="lazy" decoding="async" onerror="this.outerHTML='<div class=\\'equipe-photo-placeholder\\'>${initials}</div>'">`
                 : `<div class="equipe-photo-placeholder">${initials}</div>`
             }
             <div class="equipe-info">
@@ -541,10 +549,13 @@ function switchEngagementTab(btn, targetId) {
     // Re-trigger fade-in for the newly shown content
     initFadeInAnimation();
 
-    // Scroll to content
-    const content = document.getElementById('engagementsPageContent');
-    if (content) {
-        const offset = content.getBoundingClientRect().top + window.pageYOffset - 100;
+    // Scroll to tabs section so the icon header is fully visible
+    const tabsSection = document.querySelector('.engagements-tabs-section');
+    const scrollTarget = tabsSection || document.getElementById('engagementsPageContent');
+    if (scrollTarget) {
+        const navbar = document.getElementById('navbar');
+        const navbarHeight = navbar ? navbar.offsetHeight : 80;
+        const offset = scrollTarget.getBoundingClientRect().top + window.pageYOffset - navbarHeight;
         window.scrollTo({ top: offset, behavior: 'smooth' });
     }
 }
@@ -597,19 +608,31 @@ ${data.message}
 // Animations
 // ========================================
 
-function initFadeInAnimation() {
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-            }
-        });
-    }, {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
-    });
+// Single global observer — created once, reused for all fade-in elements
+let _fadeInObserver = null;
 
-    document.querySelectorAll('.fade-in').forEach(el => {
+function getFadeInObserver() {
+    if (!_fadeInObserver) {
+        _fadeInObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    // Stop watching once it has appeared
+                    _fadeInObserver.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        });
+    }
+    return _fadeInObserver;
+}
+
+function initFadeInAnimation() {
+    const observer = getFadeInObserver();
+    // Only observe elements not yet marked as visible and not already being watched
+    document.querySelectorAll('.fade-in:not(.visible)').forEach(el => {
         observer.observe(el);
     });
 }
@@ -752,7 +775,7 @@ function initSocialFilter() {
 // Initialization
 // ========================================
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
     console.log('🗳️ Site de campagne Raphaël Adam - Initialisation...');
     
     initNavigation();
@@ -764,12 +787,29 @@ document.addEventListener('DOMContentLoaded', () => {
         initSlider();
     }
 
+    // Collect all async loading promises so we can scroll to hash after content is ready
+    const loadPromises = [];
+
     // Only load sections that exist on this page
-    if (document.getElementById('agendaGrid')) loadAgenda();
-    if (document.getElementById('equipeGrid') && document.querySelector('.equipe-section:not(.equipe-page-section)')) loadEquipe();
-    if (document.getElementById('engagementContainer')) loadEngagement();
-    if (document.getElementById('engagementsPageContent')) loadAllEngagements();
-    if (document.getElementById('socialFeedGrid')) loadSocialFeed();
+    if (document.getElementById('agendaGrid')) loadPromises.push(loadAgenda());
+    if (document.getElementById('equipeGrid') && document.querySelector('.equipe-section:not(.equipe-page-section)')) loadPromises.push(loadEquipe());
+    if (document.getElementById('engagementContainer')) loadPromises.push(loadEngagement());
+    if (document.getElementById('engagementsPageContent')) loadPromises.push(loadAllEngagements());
+    if (document.getElementById('socialFeedGrid')) loadPromises.push(loadSocialFeed());
+
+    // Wait for all content to load, then scroll to hash if present
+    if (loadPromises.length > 0 && window.location.hash) {
+        await Promise.all(loadPromises);
+        const hash = window.location.hash;
+        const target = document.querySelector(hash);
+        if (target) {
+            setTimeout(() => {
+                const headerOffset = 80;
+                const offsetPosition = target.getBoundingClientRect().top + window.pageYOffset - headerOffset;
+                window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+            }, 100);
+        }
+    }
     
     console.log('✅ Site initialisé avec succès!');
 });

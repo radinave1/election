@@ -3,6 +3,15 @@
    Styles modernes et élégants
    ======================================== */
 
+/* === Custom Font === */
+@font-face {
+    font-family: 'AcuminVariableConcept';
+    src: url('../font/AcuminVariableConcept_2.ttf') format('truetype');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
 /* === Variables CSS === */
 :root {
     /* Design Colors */
@@ -45,8 +54,8 @@
     
     /* Other */
     --transition: all 0.3s ease;
-    --font-heading: 'Playfair Display', Georgia, serif;
-    --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-heading: 'AcuminVariableConcept', Georgia, serif;
+    --font-body: 'AcuminVariableConcept', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 /* === Reset & Base === */
@@ -56,9 +65,8 @@
     padding: 0;
 }
 
-html {
-    scroll-behavior: smooth;
-}
+/* scroll-behavior: smooth removed from html — it made regular wheel/trackpad
+   scrolling feel sluggish. Anchor smooth-scroll is handled by JS (initSmoothScroll). */
 
 body {
     font-family: var(--font-body);
@@ -107,7 +115,7 @@ img {
     z-index: 1000;
     background: transparent;
     padding: 20px 0;
-    transition: var(--transition);
+    transition: background 0.3s ease, box-shadow 0.3s ease, padding 0.3s ease;
 }
 
 .navbar.scrolled {
@@ -540,6 +548,12 @@ img {
 .agenda-type.conference { background: #ede9fe; color: #7c3aed; }
 
 /* === Équipe Section === */
+.equipe-section {
+    /* content-visibility: auto removed — it prevents proper rendering of
+       dynamically loaded content (CSV fetch) on deployed sites where network
+       latency causes the section to be skipped during initial layout. */
+}
+
 .equipe-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -551,8 +565,9 @@ img {
     border-radius: 15px;
     overflow: hidden;
     box-shadow: var(--shadow);
-    transition: var(--transition);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center;
+    /* will-change removed — permanent layers on 9+ image cards caused scroll jank */
 }
 
 .equipe-card:hover {
@@ -564,6 +579,7 @@ img {
     width: 100%;
     height: 300px;
     object-fit: cover;
+    object-position: center 20%;
     background: var(--gray-200);
 }
 
@@ -1406,11 +1422,13 @@ img {
     opacity: 0;
     transform: translateY(30px);
     transition: opacity 0.6s ease, transform 0.6s ease;
+    will-change: opacity, transform;
 }
 
 .fade-in.visible {
     opacity: 1;
     transform: translateY(0);
+    will-change: auto; /* release layer after animation completes */
 }
 
 /* === Équipe - Voir Plus Button === */
