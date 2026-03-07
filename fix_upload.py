@@ -6,6 +6,7 @@ Handles FTP TLS connections more robustly than curl
 import ftplib
 import os
 import ssl
+import sys
 import time
 
 FTP_HOST = "connect-to-ftp.viaduc.fr"
@@ -106,9 +107,19 @@ def main():
     print("=========================================")
     print("Fix Upload - Python FTP Upload")
     print("=========================================")
-    
+
+    # --quick : upload only css/style.css and index.html
+    quick_mode = "--quick" in sys.argv
+
+    if quick_mode:
+        print("Mode --quick : upload de css/style.css et index.html uniquement")
+        files_to_upload = [
+            ("css/style.css", f"{REMOTE_DIR}/css/style.css"),
+            ("index.html", f"{REMOTE_DIR}/index.html"),
+        ]
+    else:
     # Files to upload (critical ones first)
-    files_to_upload = [
+        files_to_upload = [
         # CRITICAL: CSS was empty on server
         ("css/style.css", f"{REMOTE_DIR}/css/style.css"),
         # CRITICAL: programme.csv was empty on server
@@ -127,22 +138,22 @@ def main():
         ("font/AcuminVariableConcept_2.ttf", f"{REMOTE_DIR}/font/AcuminVariableConcept_2.ttf"),
         # Logo
         ("images/logo/logo.png", f"{REMOTE_DIR}/images/logo/logo.png"),
-    ]
-    
-    # Add icons
-    for fname in os.listdir("icones"):
-        if fname.endswith('.png'):
-            files_to_upload.append((f"icones/{fname}", f"{REMOTE_DIR}/icones/{fname}"))
-    
-    # Add slider images
-    for fname in os.listdir("images/slider"):
-        if fname.endswith('.jpg'):
-            files_to_upload.append((f"images/slider/{fname}", f"{REMOTE_DIR}/images/slider/{fname}"))
-    
-    # Add team images
-    for fname in os.listdir("images/equipe"):
-        if fname.endswith('.jpg'):
-            files_to_upload.append((f"images/equipe/{fname}", f"{REMOTE_DIR}/images/equipe/{fname}"))
+        ]
+        
+        # Add icons
+        for fname in os.listdir("icones"):
+            if fname.endswith('.png'):
+                files_to_upload.append((f"icones/{fname}", f"{REMOTE_DIR}/icones/{fname}"))
+        
+        # Add slider images
+        for fname in os.listdir("images/slider"):
+            if fname.endswith('.jpg'):
+                files_to_upload.append((f"images/slider/{fname}", f"{REMOTE_DIR}/images/slider/{fname}"))
+        
+        # Add team images
+        for fname in os.listdir("images/equipe"):
+            if fname.endswith('.jpg'):
+                files_to_upload.append((f"images/equipe/{fname}", f"{REMOTE_DIR}/images/equipe/{fname}"))
     
     # Connect
     print("\nConnecting to FTP server...")
