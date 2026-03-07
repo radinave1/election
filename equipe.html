@@ -82,17 +82,8 @@
 
     <script src="js/main.js"></script>
     <script>
-        // Override DOMContentLoaded for the equipe page
+        // Load all team members on the equipe page
         document.addEventListener('DOMContentLoaded', () => {
-            // Mobile menu toggle
-            const navToggle = document.getElementById('navToggle');
-            const navMenu = document.getElementById('navMenu');
-            navToggle.addEventListener('click', () => {
-                navToggle.classList.toggle('active');
-                navMenu.classList.toggle('active');
-            });
-
-            // Load all team members
             loadAllEquipe();
         });
     </script>
