@@ -4,7 +4,7 @@
 FTP_HOST="ftp://connect-to-ftp.viaduc.fr"
 FTP_USER="h21542"
 FTP_PASS="VC7xilR8"
-REMOTE_DIR="sites/www.choisirnanterre.f/www"
+REMOTE_DIR="sites/www.choisirnanterre.fr/www"
 
 echo "========================================="
 echo "Uploading website to choisirnanterre.fr"
